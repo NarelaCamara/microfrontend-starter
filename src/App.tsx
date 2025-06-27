@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import QRcomponent from "qr/QRcomponent";
 
 function App() {
   const [portafolios, setPortafolios] = useState([
@@ -20,29 +21,7 @@ function App() {
         Getting started on Frontend Mentor
       </h3>
 
-      <div className="container__card">
-        <h4 className="card__title">{portafolios[0].title}</h4>
-        <div className="card__section">
-          <div className="section__desktop">
-            <h5 className="desktop__title">Desktop</h5>
-            <iframe
-              src={portafolios[0].url}
-              title={portafolios[0].title}
-              className="desktop__iframe"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <div className="section__mobile">
-            <h5 className="mobile__title">Mobile</h5>
-            <iframe
-              src={portafolios[0].url}
-              title={portafolios[0].title}
-              className="mobile__iframe"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
+      <QRcomponent />
     </div>
   );
 }
